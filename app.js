@@ -1,5 +1,8 @@
-import express from "express";
-import { generateUploadURL } from "./s3.js";
+//import express from "express";
+//import { generateUploadURL } from "./s3.js";
+
+const express = require('express');
+const generateUploadURL = require('./s3.js');
 
 const db = require('./db')
 
@@ -20,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.get("/s3Url", async (req, res) => {
-    const url = await generateUploadURL();
+    const url = await generateUploadURL.generateUploadURL();
     res.send({ url });
 });
 
