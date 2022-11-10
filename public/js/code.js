@@ -1,4 +1,6 @@
 const modalContacto = new bootstrap.Modal(document.getElementById('modalContacto'))
+const modalContactoBusqueda = new bootstrap.Modal(document.getElementById('modalContactoBusqueda'))
+
 const on = (element, event, selector, handler) => {
     element.addEventListener(event, e => {
         if(e.target.closest(selector)){
@@ -77,4 +79,13 @@ on(document, 'click', '.btnEditar', e =>{
     telefono_editar.value = fila.children[5].innerHTML
     direccion_editar.value = fila.children[6].innerHTML
     modalContacto.show()
+})
+
+on(document, 'click', '.btnBusqueda', e =>{
+    //const fila = e.target.parentNode.parentNode
+
+    //console.log(fila.children[3].children[0].src)
+
+    //apellido_buscar.value = fila.children[0].innerHTML
+    modalContactoBusqueda.show()
 })

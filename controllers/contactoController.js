@@ -13,6 +13,20 @@ module.exports.mostrar = (req, res) => {
     })
 }
 
+//Búsqueda por apellido
+module.exports.busqueda = (req, res) => {
+    const apellido = req.body.apellido_buscar
+    Contacto.find({ apellido: apellido}, (error, contactos) => {
+        if (error) {
+            return res.status(500).json({
+                message: 'Error mostrando los contactos'
+            })
+        }
+        //console.log(contactos)
+        return res.render('index', {contactos: contactos});
+    })
+}
+
 //Crear
 module.exports.crear = (req, res)=>{
     //console.log(req.body)

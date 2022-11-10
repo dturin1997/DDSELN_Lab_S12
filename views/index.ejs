@@ -55,7 +55,10 @@
                     <button type="submit" class="w-100 btn btn-guardar btn-lg"><i class="bi bi-save"></i>Registrar Carga</button>
                 </form>
             </div>
-        
+            <div class="text-center mt-5">
+                <a type="button" class="btnBusqueda btn btn-outline-primary bi bi-search">Buscar</a>
+                <a href="/" class="btn btn-outline-primary bi bi-house">Listar Tabla</a>
+            </div>
             <!-- Tabla Alumnos  -->
             <table id="tablaAlumnos" class="table mt-4">
                 <thead>
@@ -133,6 +136,31 @@
             </div>
             <div class="modal-footer">              
               <button type="submit" class="btn btn-primary">Actualizar</button>
+            </div>
+          </form>
+          </div>
+        </div>
+    </div>
+
+    <!-- Modal para Busquedda   -->
+    <div id="modalContactoBusqueda" class="modal fade" tabindex="-1" aria-labelledby="modalContacto" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title" id="exampleModalLabel">Busqueda por apellido</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="/busquedaApellido" method="POST">
+                  
+                <div class="mb-3">
+                  <label for="apellido_buscar" class="col-form-label">Apellido:</label>
+                  <input id="apellido_buscar" name="apellido_buscar" type="text" class="form-control" value="">
+                </div>
+                
+            </div>
+            <div class="modal-footer">              
+              <button type="submit" class="btn btn-primary">Buscar</button>
             </div>
           </form>
           </div>

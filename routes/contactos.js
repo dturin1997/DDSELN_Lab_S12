@@ -8,6 +8,8 @@ router.get('/', contactoController.mostrar)
 router.post('/crear', contactoController.crear)
 //Editar contacto (POST)
 router.post('/editar', contactoController.editar)
+//Buscar por apellido (POST)
+router.post('/busquedaApellido', contactoController.busqueda)
 //Borrar contacto (GET)
 router.get('/borrar/:id', contactoController.borrar)
 module.exports = router
